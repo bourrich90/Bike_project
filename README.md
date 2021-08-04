@@ -1,2 +1,2 @@
 # Bike_project
-this repository is dedeicated for Bike project develloped within Datascientist.com training 
+this repository is dedicated for Bike project developed within Datascientist.com  
