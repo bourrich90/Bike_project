@@ -7,3 +7,7 @@ numpy
 pandas
 joblib
 scikit-learn==0.24.1
+datetime
+typing
+jose
+passlib
