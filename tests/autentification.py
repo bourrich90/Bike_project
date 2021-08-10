@@ -3,7 +3,7 @@ import requests
 from base64 import b64encode
 
 # définition de l'adresse de l'API
-api_address = 'localhost'
+api_address = 'fastapi_from_compose'
 # port de l'API
 api_port = 8000
 
@@ -27,7 +27,6 @@ auth_header2 = f'Basic {encoded_credentials2}'
 r1 = requests.get(
     url='http://{address}:{port}/performances'.format(address=api_address, port=api_port), verify=False,
     headers={'Authorization' : str(auth_header)})
-    #auth=('alice', 'wonderland')
 
 
 # requête 2
