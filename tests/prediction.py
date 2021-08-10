@@ -26,31 +26,7 @@ r1 = requests.post(
     , data=data_pred
 )
 
-# requête 2
-# r2 = requests.post(
-#     url='http://{address}:{port}/token'.format(address=api_address, port=api_port), verify=False,
-#     data = {
-#         'grant_type' : '',
-#         'username' : 'bob',
-#         'password' : 'builder',
-#         'scope' : '',
-#         'client_id' : '',
-#         'client_secret' : ''
-#     }
-# )
 
-# requête 3
-# r3 = requests.post(
-#     url='http://{address}:{port}/token'.format(address=api_address, port=api_port), verify=False,
-#     data = {
-#         'grant_type' : '',
-#         'username' : 'alice',
-#         'password' : 'mandarine',
-#         'scope' : '',
-#         'client_id' : '',
-#         'client_secret' : ''
-#     }
-# )
 
 
 output = '''
@@ -69,12 +45,8 @@ actual restult = {status_code_r1}
 
 '''
 
-
 # statut de la requête
 status_code_r1 = r1.status_code
-# status_code_r2 = r2.status_code
-# status_code_r3 = r3.status_code
-
 
 # affichage des résultats
 if status_code_r1 == 200:
@@ -82,20 +54,7 @@ if status_code_r1 == 200:
 else:
     test_status_r1 = 'FAILURE'
 
-# if status_code_r2 == 200:
-#     test_status_r2 = 'SUCCESS'
-# else:
-#     test_status_r2 = 'FAILURE'
-#
-# if status_code_r3 == 200:
-#     test_status_r3 = 'SUCCESS'
-# else:
-#     test_status_r3 = 'FAILURE'
-
 print(output.format(status_code_r1=status_code_r1, test_status_r1=test_status_r1))
-                    #,
-# status_code_r2=status_code_r2, test_status_r2=test_status_r2,
-# status_code_r3=status_code_r3, test_status_r3=test_status_r3))
 
 # impression dans un fichier
 if os.environ.get('LOG') == '1':
