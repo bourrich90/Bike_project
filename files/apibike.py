@@ -97,7 +97,7 @@ async def ridgepredict(bk: Bike, username: str = Depends(get_current_username)):
 
     """Renvoie le décompte de vélo prédit dans les conditions ci-dessous
     """
-    df = pd.DataFrame([bk])
+    df = pd.DataFrame([bk.dict()])
 
     prediction = ridgeModel.predict(df)
     # score = ridgeModel.score(bk_array, prediction[0])
