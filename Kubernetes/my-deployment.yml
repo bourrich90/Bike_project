@@ -25,12 +25,12 @@ spec:
         - name: LOG
         - value: "1"
       - name: users_from_compose
-        image:bourrich/users:latest
+        image: bourrich/users:latest
         env:
         - name: LOG
         - value: "1"
       - name: authentication_from_compose
-          image:bourrich/autentification:latest
+        image: bourrich/autentification:latest
         env:
         - name: LOG
         - value: "1"
