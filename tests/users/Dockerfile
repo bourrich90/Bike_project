@@ -1,7 +1,6 @@
 FROM python:3
-ADD users.py requirements.txt ./
-RUN  set -xe\
-&& apt-get update -y && apt-get install -y  python3-pip  && python3 -m pip  install  --upgrade pip && python3 -m  pip install -r requirements.txt
-WORKDIR ./
+RUN apt-get update && apt-get install python3-pip -y  && pip3 install requests && pip3 install pybase64  && pip3 install jsonlib-python3
+ADD users.py /my_server/users.py
+WORKDIR /my_server/
 ENV LOG  1
 CMD python3 users.py
