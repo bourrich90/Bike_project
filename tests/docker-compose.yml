@@ -1,0 +1,46 @@
+version: '3.9'
+services:
+  fastapi:
+    image: apibike_image:latest
+    container_name: fastapi_from_compose
+    networks: 
+      - my_network_from_compose
+    volumes:
+      - ./home/ubuntu/Bike_project:/my_server/logs
+    ports: 
+      - "8000:8000"
+  authentication:
+    image: autentification:latest
+    container_name: authentication_from_compose
+    depends_on:
+      - fastapi
+    volumes:
+      - ./home/ubuntu/Bike_project:/my_server/logs
+    networks: 
+      - my_network_from_compose
+    environment:
+      LOG: 1
+  prediction:
+    image: prediction:latest
+    container_name: prediction_from_compose
+    depends_on:
+      - fastapi
+    volumes:
+      - ./home/ubuntu/Bike_project:/my_server/logs
+    networks:
+      - my_network_from_compose
+    environment:
+      LOG: 1
+  users:
+    image: users:latest
+    container_name: users_from_compose
+    depends_on:
+      - fastapi
+    volumes:
+      - ./home/ubuntu/Bike_project:/my_server/logs
+    networks: 
+      - my_network_from_compose
+    environment:
+      LOG: 1
+networks:
+  my_network_from_compose:
