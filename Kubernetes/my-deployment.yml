@@ -15,22 +15,7 @@ spec:
         app: apibike
     spec:
       containers:
-      - name: fastapi_from_compose
+      - name: fastapi-from-compose
         image: bourrich/apibike_image:latest
         ports:
         - containerPort: 8000
-      - name: prediction_from_compose
-        image: bourrich/prediction:latest
-        env:
-        - name: LOG
-        - value: "1"
-      - name: users_from_compose
-        image: bourrich/users:latest
-        env:
-        - name: LOG
-        - value: "1"
-      - name: authentication_from_compose
-        image: bourrich/autentification:latest
-        env:
-        - name: LOG
-        - value: "1"
