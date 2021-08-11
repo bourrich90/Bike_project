@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: apibike-service
+  labels:
+    app: apibike
+spec:
+  type: ClusterIP
+  ports:
+  - name: apibike-container
+    port: 8001
+    protocol: TCP
+    targetPort: 8000
+  selector:
+    app: mysql-app

@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apibike-deployment
+  labels:
+    app: apibike
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: apibike
+  template:
+    metadata:
+      labels:
+        app: apibike
+    spec:
+      containers:
+      - name: fastapi_from_compose
+        image: bourrich/apibike_image:latest
+        ports:
+        - containerPort: 8000
+      - name: prediction_from_compose
+        image: bourrich/prediction:latest
+        env:
+        - name: LOG
+        - value: "1"
+      - name: users_from_compose
+        image:bourrich/users:latest
+        env:
+        - name: LOG
+        - value: "1"
+      - name: authentication_from_compose
+          image:bourrich/autentification:latest
+        env:
+        - name: LOG
+        - value: "1"
