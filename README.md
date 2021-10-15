@@ -3,8 +3,12 @@ L’objectif de ce projet est de déployer une API permettant de prédire décom
 
 Il se compose des éléments suivants :
 
-    Un [script](https://github.com/bourrich90/Bike_project/blob/main/model_training.ipynb) d'entrainement du modèle de machine learning.
-    Une [api](https://github.com/bourrich90/Bike_project/blob/main/files/apibike.py), développée avec le framework FastAPI.
+* Un [script](https://github.com/bourrich90/Bike_project/blob/main/train/train.py) d'entrainement du modèle de machine learning.
+* Une [api](https://github.com/bourrich90/Bike_project/blob/main/files/apibike.py), développée avec le framework FastAPI.
+
+### Machine Learning
+-----------------------------------------------------------------------
+Pour lancer l'entrainement du modèle de machine learning placez vous dans le dossier training, installez les dépendances (dans un environnement virtuel dédié), puis exécutez le script train.py:
 
 
 ============API==================
