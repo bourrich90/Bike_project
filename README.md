@@ -8,9 +8,17 @@ Il se compose des éléments suivants :
 
 ### Machine Learning
 -----------------------------------------------------------------------
-Pour lancer l'entrainement du modèle de machine learning placez vous dans le dossier training, installez les dépendances (dans un environnement virtuel dédié), puis exécutez le script train.py:
+Pour lancer l'entrainement du modèle de machine learning placez vous dans le dossier train, installez les dépendances (dans un environnement virtuel dédié), puis exécutez le script train.py:
 
+``` 
+  cd train
+  pip install -r requirments_train.txt
+  python train.py
+```
 
+Le script train.py entraine 4 modéles : RandomForestRegressor , LinearRegression , Ridge et DecisionTreeRegressor,  enregistre (dans le dossier local) les modèles entrainés au format pickle (ecisiontreemodel.pkl , randomforestModel.pkl, ridgeModel.pkl, lineareModel.pkl ).
+
+### API
 ============API==================
 
 Pour lancer l'API , il faut se situer dans le chemin "https://github.com/bourrich90/Bike_project/tree/main/files" :
