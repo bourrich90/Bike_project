@@ -1,10 +1,10 @@
 # Projet Bike
-L’objectif de ce projet est de déployer un modéle de machine learning avec FastAPI , le tester avec Docker et l'implémenter avec Kubernetes 
+L’objectif de ce projet est de déployer une API permettant de prédire décompte du nombre de vélos d'un jour au lendemain (bike).
 
 Il se compose des éléments suivants :
 
-    Un script d'entrainement du modèle de machine learning.
-    Une api, développée avec le framework FastAPI.
+    Un [script](https://github.com/bourrich90/Bike_project/blob/main/model_training.ipynb) d'entrainement du modèle de machine learning.
+    Une [api](https://github.com/bourrich90/Bike_project/blob/main/files/apibike.py), développée avec le framework FastAPI.
 
 
 ============API==================
