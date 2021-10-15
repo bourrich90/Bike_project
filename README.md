@@ -1,4 +1,5 @@
 # Bike_project
+L’objectif de ce projet est de choisir, mettre en place, et peupler une base de données à partir d’un jeu de données de l’open data, et d’implémenter une API vous permettant de requêter cette base de données. 
 This repository is dedicated for Bike project developed within Datascientist.com training . The purpose was to deploy a ML model in FastAPI and test it using docker and  deploy our app on 3 pods using kubernetes
 
 ============API==================
