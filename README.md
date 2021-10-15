@@ -24,7 +24,7 @@ Après avoir entrainé les modèle de ML, nous souhaitons développer une API HT
 
 Cette API est développée avec le framework [FastAPI](https://fastapi.tiangolo.com/) dans le dossier [files](https://github.com/bourrich90/Bike_project/tree/main/files). Elle est composée des fichiers suivants :
 
- * [pibike.py](https://github.com/bourrich90/Bike_project/blob/main/files/apibike.py): fichier principal, qui définit les routes de prediction POST /ridgepredict , .
+ * [apibike.py](https://github.com/bourrich90/Bike_project/blob/main/files/apibike.py): fichier principal, qui définit les routes de prediction POST /ridgepredict , .
  * [models.py](): définit les modèles de données attendus en entrée et sortie de l'API.
  * [users.json]() : liste des username / password pour l'authentification.
  * [data_preparation.py]() : Définit la fonction prepare_data, qui permet de préparer les données pour la prédiction par le modèle de ML à partir des informations transmises dans le corps de la requête POST /prediction.
