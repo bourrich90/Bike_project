@@ -24,12 +24,12 @@ Après avoir entrainé les modèle de ML, nous souhaitons développer une API HT
 
 Cette API est développée avec le framework [FastAPI](https://fastapi.tiangolo.com/) dans le dossier [files](https://github.com/bourrich90/Bike_project/tree/main/files). Elle est composée des fichiers suivants :
 
- * [apibike.py](https://github.com/bourrich90/Bike_project/blob/main/files/apibike.py): fichier principal, qui définit les routes de prediction POST /ridgepredict ,/linearprediction, /randomforestprediction, /decisiontreeprediction .
+ * [apibike.py](https://github.com/bourrich90/Bike_project/blob/main/files/apibike.py): fichier principal, qui définit les routes de prediction POST /ridgepredict ,/linearprediction, /randomforestprediction et /decisiontreeprediction .
  * [Bikes.py](https://github.com/bourrich90/Bike_project/blob/main/files/Bikes.py): définit les modèles de données attendus en entrée de l'API.
- * [decisiontreemodel.pkl](https://github.com/bourrich90/Bike_project/blob/main/files/decisiontreemodel.pkl) : le modèle de ML entrainé, au format pickle.
- * [lineareModel.pkl](https://github.com/bourrich90/Bike_project/blob/main/files/lineareModel.pkl) : le modèle de ML entrainé, au format pickle.
- * [randomforestModel.pkl](https://github.com/bourrich90/Bike_project/blob/main/files/randomforestModel.pkl) : le modèle de ML entrainé, au format pickle.
- * [lineareModel.pkl](https://github.com/bourrich90/Bike_project/blob/main/files/lineareModel.pkl) : le modèle de ML entrainé, au format pickle.
+ * [decisiontreemodel.pkl](https://github.com/bourrich90/Bike_project/blob/main/files/decisiontreemodel.pkl) : le modèle decision tree de ML entrainé, au format pickle.
+ * [lineareModel.pkl](https://github.com/bourrich90/Bike_project/blob/main/files/lineareModel.pkl) : le modèle linear de ML entrainé, au format pickle.
+ * [randomforestModel.pkl](https://github.com/bourrich90/Bike_project/blob/main/files/randomforestModel.pkl) : le modèle random forest de ML entrainé, au format pickle.
+ * [ridgepredict.pkl](https://github.com/bourrich90/Bike_project/blob/main/files/ridgeModel.pkl) : le modèle ridge de ML entrainé, au format pickle.
  * [requirements.txt](https://github.com/bourrich90/Bike_project/blob/main/files/requirements.txt) : dépendances Python.
 
 Le modèle est chargée au lancement de l'API :
