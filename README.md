@@ -16,7 +16,7 @@ Pour lancer l'entrainement du modèle de machine learning placez vous dans le do
   python train.py
 ```
 
-Le script train.py entraine 4 modéles : RandomForestRegressor , LinearRegression , Ridge et DecisionTreeRegressor,  enregistre (dans le dossier local) les modèles entrainés au format pickle (ecisiontreemodel.pkl , randomforestModel.pkl, ridgeModel.pkl, lineareModel.pkl ).
+Le script train.py entraine 4 modéles : RandomForestRegressor , LinearRegression , Ridge et DecisionTreeRegressor,  enregistre (dans le dossier local) les modèles entrainés au format pickle (decisiontreemodel.pkl , randomforestModel.pkl, ridgeModel.pkl, lineareModel.pkl ).
 
 ### API
 -------------------------------------------------------------------------
@@ -24,12 +24,13 @@ Après avoir entrainé les modèle de ML, nous souhaitons développer une API HT
 
 Cette API est développée avec le framework [FastAPI](https://fastapi.tiangolo.com/) dans le dossier [files](https://github.com/bourrich90/Bike_project/tree/main/files). Elle est composée des fichiers suivants :
 
- * [apibike.py](https://github.com/bourrich90/Bike_project/blob/main/files/apibike.py): fichier principal, qui définit les routes de prediction POST /ridgepredict , .
- * [models.py](): définit les modèles de données attendus en entrée et sortie de l'API.
- * [users.json]() : liste des username / password pour l'authentification.
- * [data_preparation.py]() : Définit la fonction prepare_data, qui permet de préparer les données pour la prédiction par le modèle de ML à partir des informations transmises dans le corps de la requête POST /prediction.
- * [data/model.pkl]() : le modèle de ML entrainé, au format pickle.
- * [requirements.txt]() : dépendances Python.
+ * [apibike.py](https://github.com/bourrich90/Bike_project/blob/main/files/apibike.py): fichier principal, qui définit les routes de prediction POST /ridgepredict ,/linearprediction, /randomforestprediction, /decisiontreeprediction .
+ * [Bikes.py](https://github.com/bourrich90/Bike_project/blob/main/files/Bikes.py): définit les modèles de données attendus en entrée de l'API.
+ * [decisiontreemodel.pkl](https://github.com/bourrich90/Bike_project/blob/main/files/decisiontreemodel.pkl) : le modèle de ML entrainé, au format pickle.
+ * [lineareModel.pkl](https://github.com/bourrich90/Bike_project/blob/main/files/lineareModel.pkl) : le modèle de ML entrainé, au format pickle.
+ * [randomforestModel.pkl](https://github.com/bourrich90/Bike_project/blob/main/files/randomforestModel.pkl) : le modèle de ML entrainé, au format pickle.
+ * [lineareModel.pkl](https://github.com/bourrich90/Bike_project/blob/main/files/lineareModel.pkl) : le modèle de ML entrainé, au format pickle.
+ * [requirements.txt](https://github.com/bourrich90/Bike_project/blob/main/files/requirements.txt) : dépendances Python.
 
 Le modèle est chargée au lancement de l'API :
 ============API==================
