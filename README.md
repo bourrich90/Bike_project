@@ -122,7 +122,7 @@ Ces tests permettent notamment de s'assurer que :
 
 #### Docker compose:
 
-Vous pouvez  lancez l'API et les tests directement grâce à [docker-compose]() :
+Vous pouvez  lancez l'API et les tests directement grâce à [docker-compose](https://github.com/bourrich90/Bike_project/blob/main/tests/docker-compose.yml) :
 ```
 cd tests
 docker-compose up --build
